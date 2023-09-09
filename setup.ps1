@@ -45,6 +45,8 @@ Write-Done
 # https://marketplace.visualstudio.com/VSCode
 Write-Start -msg "Configuring VSCode"
 	code --install-extension vscodevim.vim --force
+	code --install-extension dracula-theme.theme-dracula --force
+	code --install-extension ms-python.python --force
 Write-Done
 
 
