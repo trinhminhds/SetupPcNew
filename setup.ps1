@@ -35,9 +35,10 @@ Write-Done
 # https://scoop.sh/
 # Search an app
 Write-Start -msg "Installing Scoop's packages"
-	scoop install <# Web #>		googlechrome
-	scoop install <# Tool #> 		
-	scoop install <# Coding #>	vscode gcc python 
+	scoop install <# Web #>	 googlechrome
+	scoop install <# Tool #>  bluestacks-np
+	scoop install <# Coding SQL #> 	sql-server-management-studio-np mysql mysql-workbench
+	scoop install <# Coding C++ and python #>  	vscode gcc python
 	Start-Process -Wait powershell -ver runas -ArgumentList "scoop install DejaVuSansMono-NF-Mono"
 Write-Done
 
@@ -47,6 +48,14 @@ Write-Start -msg "Configuring VSCode"
 	code --install-extension vscodevim.vim --force
 	code --install-extension dracula-theme.theme-dracula --force
 	code --install-extension ms-python.python --force
+	code --install-extension dzhavat.bracket-pair-toggler
+	code --install-extension ms-vscode.cpptools
+	code --install-extension visualstudioexptteam.vscodeintell
+	code --install-extension ms-toolsai.jupyter
+	code --install-extension esbenp.prettier-vscode
+	code --install-extension vscode-icons-team.vscode-icons
+	code --install-extension streetsidesoftware.code-spell-checker
+	code --install-extension adpyke.codesnap
 Write-Done
 
 
