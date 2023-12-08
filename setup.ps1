@@ -26,27 +26,29 @@ Write-Done
 
 Write-Start -msg "Initializing Scoop..."
 	scoop install git 
-	scoop bucket add extras 
+	scoop bucket add extras
+	scoop bucket add main 
 	scoop bucket add nerd-fonts
 	scoop bucket add java
+	scoop bucket add nonportable
 	scoop update
 Write-Done
 
 # https://scoop.sh/
 # Search app
 Write-Start -msg "Installing Scoop's packages"
-	scoop install <# Web #>	 googlechrome
-	scoop install <# Tool #>  bluestacks-np
-	scoop install <# Coding SQL #> 	sql-server-management-studio-np mysql mysql-workbench
-	scoop install <# Coding C++ and python #>  vscode gcc python
-	scoop install <# Coding java #> find-java
+	scoop install <# Web #>	googlechrome
+	scoop install <# Tool #> bluestacks-np
+	scoop install <# Coding SQL #> sql-server-management-studio-np mysql mysql-workbench
+	scoop install <# Coding C++ and python #> mingw python oraclejdk
+	scoop install <# IDE #> anaconda3 vscode 
+	scoop install <# Extension #> draw.io
 	Start-Process -Wait powershell -ver runas -ArgumentList "scoop install DejaVuSansMono-NF-Mono"
 Write-Done
 
 
 # https://marketplace.visualstudio.com/VSCode
 Write-Start -msg "Configuring VSCode"
-	code --install-extension vscodevim.vim --force
 	code --install-extension dracula-theme.theme-dracula --force
 	code --install-extension ms-python.python --force
 	code --install-extension dzhavat.bracket-pair-toggler --force
@@ -58,6 +60,7 @@ Write-Start -msg "Configuring VSCode"
 	code --install-extension streetsidesoftware.code-spell-checker --force
 	code --install-extension adpyke.codesnap --force
 	code --install-extension vscjava.vscode-java-pack --force
+	code --install-extension ms-toolsai.jupyter --force
 Write-Done
 
 
